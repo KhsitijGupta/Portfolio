@@ -199,6 +199,7 @@ h3{
 .profiles{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .project,.pro{
     padding: 20px;
@@ -209,9 +210,12 @@ h3{
     flex-direction: column;
     align-items: center;
 }
+.pro{
+    margin-top: 20px;
+}
 .pro img{
     border-radius: 20px;
-    background-color: blanchedalmond;
+    background-color: rgb(200,200,200);
 }
 .project button,.pro button{
     padding: 10px 30px;
@@ -224,20 +228,26 @@ h3{
     color: black;
 }
 /* projects section */
+.projects_sec{
+    width:100%;
+    height:1000px;
+}
 .row_1{
     height:500px;
     margin:20px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;    
+    align-items: center;  
+    flex-wrap: wrap;  
 }
 .project{
+    margin:20px;
     width:480px;
     height:500px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .project img{
     border: 2px solid black;
@@ -288,8 +298,12 @@ h3{
     font-size: larger;
     color:black;
 }
-
-
+ @media (max-width:560px) {
+    .projects_sec{
+        width:90%;
+        height:2120px;
+    }
+ }
 .typing-text {
     overflow: hidden;
     animation: typing 4s steps(40, end) infinite, blink-caret .75s step-end infinite; 
