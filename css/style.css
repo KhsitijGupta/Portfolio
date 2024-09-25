@@ -9,8 +9,9 @@ body{
 }
 .navbar{
     width:100%;
-    background-color: rgb(255,255,255);
+    background-color:#ffffff;
     position: fixed;
+    z-index: 999;
 }
 .navbar ul{
     font-size: larger;
@@ -72,6 +73,13 @@ span{
     background-color:black;
     color:rgb(66, 157, 209);
     border:2px solid white;
+}
+.img img{
+    position: absolute;
+    top: 12%;
+    left: 0;
+    z-index: -99;
+    width: 100%;
 }
 /* ABOUT section  */
 .section2{
@@ -303,6 +311,9 @@ h3{
     .projects_sec{
         width:90%;
         height:2520px;
+    }
+    .img img{
+        display: none;
     }
  }
 .typing-text {
