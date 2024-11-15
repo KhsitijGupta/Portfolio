@@ -8,6 +8,34 @@ body{
     overflow-x:hidden ;
     
 }
+.hide-navbar1 {
+    top: -10em;
+    position: fixed;
+    z-index:5;
+    width:100%;
+    transition: top 0.3s ease;
+   }
+   
+   .show-navbar1 {
+    top: 0;
+    width:100%;
+    position: fixed;
+    z-index: 3;
+    transition: top 0.3s ease;
+   }
+   .home-show {
+    top: 0;
+    width:100%;
+    position: relative;
+    z-index: 3;
+    transition: top 0.3s ease;
+   }
+.newOverlayEffect{
+    position: absolute;
+    top:100%;
+    z-index: 4;
+
+}
 .navbar{
     width:100%;
     background-color:#ffffff;
@@ -27,6 +55,9 @@ body{
     border-bottom: 3px solid rgb(66, 157, 209);
 }
 .section1{
+    position: absolute;
+    z-index: -1;
+    top:50px;
     display: flex;
     justify-content:space-evenly;
     align-items: center;
@@ -35,22 +66,26 @@ body{
     padding:20px;
 }
 .content p{
-    font-size:small;
-    margin-left: 20px;
+    font-size:15px;
+    margin-left: 7px;
     color: black;
+    text-align: justify;
 }
-button,h6,h5{
-    padding: 5px;
+h6{
+    font-size: x-large;
     margin: 12px;
+}
+button,h5{
+    padding: 5px;
     font-size: x-large;
 }
 h1{
     padding: 5px;
     margin: 5px;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 900;
 }
-span{
+.name{
     color:rgb(66, 157, 209);
 }
 .btn{
@@ -75,17 +110,15 @@ span{
     color:rgb(66, 157, 209);
     border:2px solid white;
 }
-.img img{
+.img img {
     position: absolute;
-    top: 12%;
+    top: 4%;
     left: 0;
     z-index: -99;
-    width: 100%;
+    width: 120%;
 }
 /* ABOUT section  */
-.section2{
-    /* padding-top: 50px; */
-}
+
 .abt_img{
     margin:15px;
     background-color: rgb(66, 157, 209);
@@ -115,8 +148,9 @@ span{
 .abt_ct p{
     padding: 0;
     margin:0px;
-    font-size:20px;
+    font-size:18    px;
     color: black;
+    text-align: justify;
 }
 .abt_ct ul{
     list-style: none;    
