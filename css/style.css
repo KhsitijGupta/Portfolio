@@ -510,12 +510,13 @@ header.scrolled {
 }
 
 .abt_h {
+    height: 300px;
     position: relative;
     margin-bottom: 3rem;
 }
 
 #aboutme {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--light);
     position: relative;
     z-index: 1;
@@ -528,9 +529,9 @@ header.scrolled {
 
 #about {
     position: absolute;
-    top: -30px;
-    left: -10px;
-    font-size: 7rem;
+    top: -40px;
+    left: -21px;
+    font-size: 9rem;
     color: rgba(255, 255, 255, 0.03);
     z-index: 0;
     font-weight: 900;
@@ -1273,4 +1274,78 @@ hr {
     .social-icon i {
         font-size: 1.5rem;
     }
+    .abt_h {
+        height:40px;
+    }
 }
+
+.show-more-btn {
+    margin-top: 20px;
+    padding: 1rem 2.5rem;
+    background: var(--gradient);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
+  }
+  
+
+  
+  .project {
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .project.animate {
+    animation: fadeInUp 0.5s ease-in-out forwards;
+  }
+
+  .show-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.show-more-btn:hover::before {
+    width: 100%;
+}
+
+.show-more-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 123, 0, 0.3);
+}
+
+.section4 {
+    padding: 10rem 5%;
+    background-color: var(--darker);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  

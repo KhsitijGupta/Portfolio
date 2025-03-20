@@ -83,3 +83,55 @@ document.addEventListener('DOMContentLoaded', function() {
     // Trigger scroll once to initialize animations
     window.dispatchEvent(new Event('scroll'));
 });
+// Add this to your existing script.js file
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Projects functionality
+    const projectsContainer = document.querySelector(".row_1")
+    const projects = Array.from(projectsContainer.querySelectorAll(".project"))
+    const initialProjectsToShow = 3 // Show only 3 projects initially
+    let showingAllProjects = false
+  
+    // Create the "Show More" button
+    const showMoreButton = document.createElement("button")
+    showMoreButton.className = "show-more-btn"
+    showMoreButton.innerHTML = "Show More Projects"
+  
+    // Insert the button after the projects container
+    projectsContainer.parentNode.insertBefore(showMoreButton, projectsContainer.nextSibling)
+  
+    // Hide projects beyond the initial count
+    projects.forEach((project, index) => {
+      if (index >= initialProjectsToShow) {
+        project.style.display = "none"
+      }
+    })
+  
+    // Toggle projects visibility when button is clicked
+    showMoreButton.addEventListener("click", () => {
+      showingAllProjects = !showingAllProjects
+  
+      projects.forEach((project, index) => {
+        if (index >= initialProjectsToShow) {
+          project.style.display = showingAllProjects ? "block" : "none"
+  
+          // Add animation class when showing
+          if (showingAllProjects) {
+            setTimeout(
+              () => {
+                project.classList.add("animate")
+              },
+              50 * (index - initialProjectsToShow),
+            )
+          } else {
+            project.classList.remove("animate")
+          }
+        }
+      })
+  
+      // Update button text
+      showMoreButton.innerHTML = showingAllProjects ? "Show Less Projects" : "Show More Projects"
+    })
+  })
+  
+  
